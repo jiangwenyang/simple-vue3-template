@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "ylsf",
+  "name": "vue3-template",
   "type": "module",
   "version": "1.0.0",
   "private": true,
