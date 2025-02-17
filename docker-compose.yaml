@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:80' # 将 8080 端口映射到容器的 80 端口
+    environment:
+      NODE_ENV: production

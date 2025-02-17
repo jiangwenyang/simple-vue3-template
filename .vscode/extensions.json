@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "vitest.explorer",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "bradlc.vscode-tailwindcss",
+    "oouo-diogo-perdigao.docthis",
+    "mikestead.dotenv",
+    "wayou.vscode-todo-highlight",
+    "VisualStudioExptTeam.vscodeintellicode"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur"
+  ]
+}
