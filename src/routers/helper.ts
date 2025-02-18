@@ -1,11 +1,11 @@
-import pinia from '@/stores'; // 引入pinia实例
+import pinia from '@/stores' // 引入pinia实例
 
-import routes from './routes';
+import routes from './routes'
 
-import type { Router } from 'vue-router';
+import type { Router } from 'vue-router'
 
-import { useResourceStore } from '@/stores/useResourceStore';
-import { useUserStore } from '@/stores/useUserStore';
+import { useResourceStore } from '@/stores/useResourceStore'
+import { useUserStore } from '@/stores/useUserStore'
 
 const whitePathList = ['/404']
 export const routerGuard = (router: Router) => {
@@ -15,6 +15,12 @@ export const routerGuard = (router: Router) => {
 
     const { isAuthenticated } = useUserStore(pinia)
     const { getResource, hasFetchResource, resourceMenuCodes } = useResourceStore(pinia)
+
+    // 演示模式
+    if (import.meta.env.VITE_EXAMPLE === 'true') {
+      next()
+      return
+    }
 
     // 白名单
     if (whitePathList.includes(to.path)) {
@@ -34,7 +40,6 @@ export const routerGuard = (router: Router) => {
       if (!hasFetchResource) {
         await getResource()
       }
-
 
       // 跳过所有鉴权，仅临时开发使用
       if (import.meta.env.VITE_APP_SKIP_AUTH === 'true') {

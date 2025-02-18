@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:example": "vite --mode example",
     "build": "run-p type-check \"build-only {@}\" --",
     "build:analyze": "vite build --mode analyze",
     "deploy": "docker-compose up --build -d",
@@ -16,6 +17,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
+    "build-only:example": "vite build",
     "type-check": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
